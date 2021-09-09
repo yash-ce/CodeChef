@@ -1,0 +1,23 @@
+//https://www.codechef.com/CCSTART2/problems/DIFACTRS
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	int a[n];
+	int count=0, idx = 0;
+	for(int i=1;i<=n;i++){
+	    if(n%i == 0){
+	        a[idx++] = i;
+	        count++;
+	    }
+	}
+	cout<< count<< endl;
+	for(int i=0;i<idx;i++){
+	    cout<<a[i]<< " ";
+	}
+	return 0;
+}
