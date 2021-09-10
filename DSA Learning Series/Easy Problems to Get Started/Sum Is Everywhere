@@ -1,0 +1,21 @@
+//https://www.codechef.com/CCSTART2/problems/SUMEVOD
+
+# cook your dish here
+n = int(input())
+
+c = 0
+even = 0
+odd  = 0
+for i in range(1,n*10):
+    if c == n:
+        break
+    if i%2 == 0:
+        even += i
+        c += 1
+    else:
+        odd += i
+        
+
+print(odd, even)
+
+    
