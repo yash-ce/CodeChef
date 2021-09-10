@@ -1,0 +1,16 @@
+//https://www.codechef.com/CCSTART2/problems/ADDNATRL
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long n;
+	cin>>n;
+	long long sum1= 0;
+	for(long long  i=1;i<=n;i++){
+	    sum1 += i;
+	}
+	cout<<sum1<<endl;
+	return 0;
+}
