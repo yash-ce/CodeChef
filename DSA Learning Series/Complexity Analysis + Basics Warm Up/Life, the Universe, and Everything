@@ -1,0 +1,17 @@
+// https://www.codechef.com/LRNDSA01/problems/TEST
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	do{
+	   // int n;
+	    cin>>n;
+	    if(n != 42){
+	        cout<<n<<endl;
+	    }
+	}while(n != 42);
+	return 0;
+}
