@@ -1,0 +1,26 @@
+//https://www.codechef.com/LRNDSA01/problems/FLOW007
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	while(n--){
+	    int num;
+	    cin>>num;
+	    int temp;
+	    temp = num;
+	    int rev = 0;
+	    while(num > 0){
+	        int dig = num%10;
+	        num = num/10;
+	        rev = rev*10 + dig;
+	    }
+	    
+	    cout<< rev << endl;
+	     
+	}
+	return 0;
+}
