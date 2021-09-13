@@ -1,0 +1,82 @@
+//  https://www.codechef.com/SEPT21C/problems/PALINT
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;  
+
+class GFG {
+	public static void main (String[] args) {
+	    
+	   
+	    Scanner sc = new Scanner(System.in);  
+	    int t = sc.nextInt();
+	    for(int i=0;i<t;i++){
+	        int n = sc.nextInt();
+	        int x = sc.nextInt();
+	        int a[] = new int[n];
+	        for(int j=0;j<n;j++){
+	            int num = sc.nextInt();
+	            a[j] = num; 
+	        }
+	        
+	        int result[] = new int[2];
+	        result = findMax(x, a);
+	        
+	       System.out.println(result[0]+" "+result[1]);
+	        
+	        
+	        
+	    }
+	    
+
+
+	}
+	
+	public static int[] findMax(int x, int[] arr) {
+    HashMap<Integer,Integer> counter = new HashMap<>();
+    HashMap<Integer,Integer> operations = new HashMap<>();
+    for(int num: arr) {
+        // count num of occurrence
+        counter.put(num, counter.getOrDefault(num, 0) + 1);
+        // initially there is 0 operation.
+        operations.put(num, 0);
+    }
+    for(int num: arr) {
+        // Special case where it does not give us a new number.
+        if(x == 0) {
+            break;
+        }
+        int xorResult = num ^ x;
+        // update counter and operations.
+        counter.put(xorResult, counter.getOrDefault(xorResult, 0) + 1);
+        operations.put(xorResult, operations.getOrDefault(xorResult, 0) + 1);
+    }
+    List<Integer> list = new ArrayList<>();
+    int max = 1;
+    // Finding all numbers with greatest occurrences.
+    for(Map.Entry<Integer, Integer> entry: counter.entrySet()){
+        if(max < entry.getValue()) {
+            max = entry.getValue();
+            list.clear();
+            list.add(entry.getKey());
+        } else if (max == entry.getValue()){
+            list.add(entry.getKey());
+        }
+    }
+    int minOperation = Integer.MAX_VALUE;
+    // Choose the lowest operations.
+    for(int num: list) {
+        minOperation = Math.min(minOperation, operations.get(num));
+    }
+    return new int[]{max, minOperation};
+}
+}
