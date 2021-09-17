@@ -1,2 +1,33 @@
 //https://www.codechef.com/START11C/problems/FACEDIR
 
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    
+	    int n;
+	    cin>>n;
+	    
+	    int num = n%4;
+	    
+	    if(num == 0){
+	        cout << "North" <<endl;
+	    }
+	    else if(num == 1){
+	        cout << "East" <<endl;
+	    }
+	    else if(num == 2){
+	        cout << "South" <<endl;
+	    }
+	    else{
+	       
+	        cout << "West" <<endl;
+	    }
+	    
+	}
+	return 0;
+}
