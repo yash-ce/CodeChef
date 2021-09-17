@@ -1,0 +1,31 @@
+//https://www.codechef.com/START11B/problems/BIGARRAY
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long int t;
+	cin>>t;
+	while(t--){
+	    
+	    long long int n, s;
+	    cin>>n>>s;
+	    
+	    long long int sum = (n)*(n+1)/2;
+	    long long int ans = 0;
+	    if(sum > s){
+	        ans = sum-s;
+	    }
+	    
+	    if(ans>=1 && ans<=n){
+	        cout<<ans<<endl;
+	    }
+	    else{
+	        cout<<"-1"<<endl;
+	    }
+	    
+	}
+	
+	return 0;
+}
