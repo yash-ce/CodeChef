@@ -1,0 +1,40 @@
+//https://www.codechef.com/START11B/problems/MAX_DIFF
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	
+	while(t--){
+	    int n, s;
+	    cin>>n>>s;
+	    
+	    if(n == s){
+	        cout<<n<<endl;
+	    }
+	    else if(n > s){
+	        
+	        
+	        cout<<s<<endl;
+	        
+	    }
+	    else{
+	       
+	        int num = 0;    
+	        for(int i=0;i<=n;i++){
+	            if(i+n == s){
+	                num = i;
+	                break;
+	            }
+	        }
+	        cout<<n-num<<endl;
+	        
+	        
+	    }
+	    
+	}
+	return 0;
+}
