@@ -1,0 +1,96 @@
+//https://www.codechef.com/START11B/problems/POSSPEW
+
+// Time limit exceeded please optimize the code
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long int t;
+	cin>>t;
+	
+	while(t--){
+	    long long int n, k;
+	    cin>>n>>k;
+	   // cout<<n << k;
+	    long long int a[n];
+    	    for(long long int p=1;p<=n;p++){
+    	        cin>>a[p];
+    	    }
+    	   // for(long long int j=1;j<=n;j++){
+    	   //     cout<<a[j]<<" ";
+    	   // }
+	    
+    	    long long int res[n];
+    	   // cout<<endl;
+    	    for(long long int j=1;j<=n;j++){
+    	        res[j] = a[j];
+    	    }
+    	   // for(long long int j=1;j<=n;j++){
+    	   //     cout<<res[j]<<" ";
+    	   // }
+    	    
+    	   // cout<<endl;
+	    
+	    for(long long int i = 0;i<k;i++){
+	        
+    	    
+    	    for(long long int l=1;l<=n;l++){
+    	        if(a[l] > 0 ){
+    	       //     if(l == 1){
+    	       //     res[l+1]++;
+    	       //     res[n]++;
+    	            
+    	       // }
+    	       // else if(l == n){
+    	       //     res[l-1]++;
+    	       //     res[1]++;
+    	       // }
+    	       // else{
+    	       //     res[l-1]++;
+    	       //     res[l+1]++;
+    	       // }
+    	            long long int ind1 = (l+1)%n;
+    	            long long int ind2 = (l-1)%n;
+    	            if(ind2 == 0){
+    	               res[ind1]++;
+    	               res[n]++;
+    	            }
+    	            else if(ind1 == 0){
+    	                res[ind2]++;
+    	               res[n]++;
+    	            }
+    	            else{
+    	            res[ind1]++;
+    	            res[ind2]++;
+    	            }
+    	        }
+    	    }
+    	   // cout<<"\nf->>irst ";
+    	   //  for(long long int q=1;q<=n;q++){
+	       // cout<< res[q]<<" ";
+	       // }
+    	    
+    	    for(long long int id =1;id<=n;id++){
+    	        a[id] = res[id];
+    	    }
+    	    
+    	    
+	    }
+	   // cout<<"array\n";
+	    long long int sum = 0;
+	   // for(long long int q=1;q<=n;q++){
+	   //     cout<< res[q]<<" ";
+	   // }
+	    for(long long int q=1;q<=n;q++){
+	        sum += res[q];
+	    }
+	    
+	    cout<< sum << endl;
+	    
+	    
+	    
+	}
+	return 0;
+}
