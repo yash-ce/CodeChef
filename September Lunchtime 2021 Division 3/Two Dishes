@@ -1,0 +1,35 @@
+// https://www.codechef.com/LTIME100C/problems/TWODISH
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n, a, b, c;
+	    cin>>n>>a>>b>>c;
+	    int t = 0;
+	    if(a < b){
+	        t += a;
+	    }
+	    int m = b-a;
+	    if(c <= m){
+	        t += c;
+	    }
+	    else{
+	        t += m;
+	    }
+	    if(t >= n){
+	        cout<<"Yes"<<endl;
+	    }
+	    else{
+	        cout<<"NO"<<endl;
+	    }
+	    
+	    
+	}
+	return 0;
+}
