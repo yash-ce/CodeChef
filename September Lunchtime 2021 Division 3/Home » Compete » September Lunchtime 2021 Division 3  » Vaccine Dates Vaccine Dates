@@ -1,0 +1,29 @@
+// https://www.codechef.com/LTIME100C/problems/VDATES
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long int t =0;
+	cin>>t;
+	while(t--){
+	    long long int D, L,R;
+	    
+	    cin>>D>>L>>R;
+	    if(D >= L  && D <= R){
+	        cout<<"Take second dose now"<<endl;
+	        
+	        
+	    }
+	    else if(D > L){
+	        cout<<"Too Late"<<endl;
+	        
+	    }
+	    else{
+	        cout<<"Too Early"<<endl;
+	    }
+	    
+	}
+	return 0;
+}
