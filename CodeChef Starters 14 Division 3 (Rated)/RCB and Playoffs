@@ -1,0 +1,27 @@
+//  https://www.codechef.com/START14C/problems/RCBPLAY
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int x, y, z;
+	    cin>>x>>y>>z;
+	    
+	    int res = x;
+	    for(int i=0;i<z;i++){
+	        res += 2;
+	    }
+	    
+	    if(res >= y){
+	        cout<<"YES"<<endl;
+	    }
+	    else{
+	        cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}
