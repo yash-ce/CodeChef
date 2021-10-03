@@ -1,0 +1,32 @@
+//  https://www.codechef.com/OCT21C/problems/ANDSUBAR
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    long long int t;
+    cin>>t;
+    while(t--){
+        long long int n;
+        cin>>n;
+        
+        long long int l=0;
+        l = log(n)/log(2);
+        long long int p = pow(2, l);
+        long long int x = p/2;
+        long long int y = n-p+1;
+        
+        if(x > y){
+            cout<<x<<endl;
+        }
+        else{
+            cout<<y<<endl;
+        }
+    }
+    
+    return 0;
+
+}
+
+
