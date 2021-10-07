@@ -1,0 +1,41 @@
+//  https://www.codechef.com/OCT21C/problems/MEXOR
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long int t;
+	cin>>t;
+	while(t--){
+	    long long int x;
+	    cin>>x;
+	    
+	    if(x == 0){
+	        cout<<"1\n";
+	    }
+	    else if(x == 1){
+	        cout<<"2\n";
+	    }
+	    else if(x == 2){
+	        cout<<"2\n";
+	    }
+	    else{
+	        long long int ans = 1;
+	        while(2 * ans <= x){
+	            ans *= 2;
+	        }
+	        
+	        if(ans == x){
+	            cout<<x<<"\n";
+	        }
+	        else if(x == (2*ans - 1)){
+	            cout<<x+1<<"\n";
+	        }
+	        else{
+	            cout<<ans<<"\n";
+	        }
+	    }
+	}
+	return 0;
+}
