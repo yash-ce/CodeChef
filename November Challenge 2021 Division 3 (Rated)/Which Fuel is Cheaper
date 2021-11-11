@@ -1,0 +1,25 @@
+//  https://www.codechef.com/NOV21C/problems/CHEAPFUEL
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int X, Y, A, B, K;
+	    cin>>X>>Y>>A>>B>>K;
+	    
+	    if(X+(A*K) > Y+(B*K)){
+	        cout<<"DIESEL"<<endl;
+	    }
+	    else if(X+(A*K) < Y+(B*K)){
+	        cout<<"PETROL"<<endl;
+	    }
+	    else{
+	        cout<<"SAME PRICE"<<endl;
+	    }
+	}
+	return 0;
+}
