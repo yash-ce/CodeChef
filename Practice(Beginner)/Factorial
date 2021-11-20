@@ -1,0 +1,32 @@
+//  https://www.codechef.com/PRACTICE/problems/FCTRL
+
+#include <iostream>
+using namespace std;
+
+int findTrailingZeros(int n)
+{
+    if (n < 0)
+        return -1;
+ 
+ 
+    int count = 0;
+ 
+    
+    for (int i = 5; n / i >= 1; i *= 5)
+        count += n / i;
+ 
+    return count;
+}
+
+int main() {
+	// your code goes here
+	long long int t = 0;
+	cin>>t;
+	while(t--){
+	    long long int n = 0;
+	    cin>>n;
+	    long long int res =  findTrailingZeros(n);
+	    cout<<res<<endl;
+	}
+	return 0;
+}
