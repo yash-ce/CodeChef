@@ -1,0 +1,32 @@
+//  https://www.codechef.com/START18C/problems/MINDAYSRET
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    
+	    int N, K;
+	    cin>>N>>K;
+	    
+	    if(N == K){
+	        cout<<1<<endl;
+	    }
+	    else if(N < K){
+	        cout<<1<<endl;
+	    }
+	    else{
+	        int n1 = N/K;
+	        if((N%K) == 0){
+	            cout<<n1<<endl;
+	        }
+	        else{
+	            cout<<n1+1<<endl;
+	        }
+	    }
+	}
+	return 0;
+}
