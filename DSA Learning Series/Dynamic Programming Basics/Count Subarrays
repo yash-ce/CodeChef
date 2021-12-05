@@ -1,0 +1,14 @@
+//   https://www.codechef.com/LRNDSA07/problems/SUBINC
+
+def solve(ar, n):
+	ans = [1]*n
+	for i in range(1,n):
+		if ar[i] >= ar[i-1]:
+			ans[i] = ans[i-1] + 1
+	return sum(ans)
+
+n = int(input())
+for _ in range(n):
+	t = int(input())
+	ar = [int(x) for x in input().split()]
+	print(solve(ar, t))
