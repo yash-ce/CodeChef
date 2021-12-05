@@ -1,0 +1,20 @@
+//  https://www.codechef.com/LRNDSA01/problems/LADDU
+
+for _ in range(int(input())):
+    act, origin = map(str, input().split())
+    total = 0
+    for _ in range(int(act)):
+        arr = list(map(str, input().split()))
+        
+        if arr[0] == 'TOP_CONTRIBUTOR':
+            total += 300
+        elif arr[0] == 'CONTEST_HOSTED':
+            total += 50
+        elif arr[0] == 'CONTEST_WON':
+            total += 300+max(0,20-int(arr[1]))
+        else:
+            total += int(arr[1])
+    if origin == 'INDIAN':
+        print(total//200)
+    else:
+        print(total//400)
