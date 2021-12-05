@@ -1,0 +1,28 @@
+// https://www.codechef.com/CCSTART2/problems/SQALPAT
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes 
+	int n;
+	cin>>n;
+	int c = 1;
+	for(int i =1;i<=n;i++){
+	    if((i*1)%2 != 0){
+    	    for(c=(i-1)*5+1;c<=5*i;c++){
+    	        cout<<c<<" ";
+    	    }
+    	    cout<<endl;
+	    }
+	    else{
+	        for(c=5*i;c>5*(i-1);c--){
+    	        cout<<c<<" ";
+    	    }
+    	    cout<<endl;
+	    }
+	}
+	
+	
+	return 0;
+}
