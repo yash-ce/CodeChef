@@ -1,0 +1,40 @@
+//  https://www.codechef.com/LRNDSA07/problems/KPRIME
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N=1e7+7;
+int is_prime[N];
+void calcSieve()
+{
+    is_prime[0]=is_prime[1]=1;
+    for(int i=2;i<=N;i++)
+    {
+        if(!is_prime[i])
+        {
+            for(int j=i;j<=N;j+=i)
+            {
+                is_prime[j]++;
+            }
+        }
+    }
+}
+int main()
+{
+    calcSieve();
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int a,b,k;
+        cin>>a>>b>>k;
+        int count=0;
+        for(int i=a;i<=b;i++)
+        {
+            if(is_prime[i]==k)
+            {
+                count++;
+            }
+        }
+        cout<<count<<endl;
+    }
+}
