@@ -1,0 +1,14 @@
+//   https://www.codechef.com/DEC21C/problems/UTKPLC
+
+t = int(input())
+
+for _ in range(t):
+    l = list(map(str, input().split()))
+    l1 = list(map(str, input().split()))
+    a = l.index(l1[0])
+    b = l.index(l1[1])
+    
+    if a < b:
+        print(l1[0])
+    else:
+        print(l1[1])
