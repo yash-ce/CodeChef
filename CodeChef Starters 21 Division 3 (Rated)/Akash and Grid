@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int a, b, c;
+	    cin>>a>>b>>c;
+	    int x = (a+1)/2;
+	    int y = x;
+	    int diff = abs(x-b)+abs(y-c);
+	    if(diff%2 != 0){
+	        cout<<1<<endl;
+	    }
+	    else{
+	        cout<<0<<endl;
+	    }
+	}
+	return 0;
+}
