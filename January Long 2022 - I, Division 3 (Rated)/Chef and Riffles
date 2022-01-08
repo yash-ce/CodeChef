@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+#include<vector>
+int main() {
+	// your code goes here
+	long long int t;
+	cin>>t;
+	while(t--){
+	    long long int n, k;
+	    cin>>n>>k;
+	   // vector<int> ans(n);
+	    
+	   // vector<int> v;
+	   // for(long long int i=1;i<=n;i++){
+	   //     v.push_back(i);
+	   // }
+	   // vector<int> r1(n) ;
+	   // for(long long int j=1;j<=k;j++){
+	   //     vector<int> r(n);
+	   //     long long int ind = 0;
+	   //     for(long long int c=0;c<n;c++){
+	   //         if(c%2 == 0){
+	   //             r[ind++] = v[c];
+	   //         }
+	   //     }
+	   //     for(long long int c=0;c<n;c++){
+	   //         if(c%2 != 0){
+	   //             r[ind++] = v[c];
+	   //         }
+	   //     }
+	   //    // for(long long int c=0;c<n;c++){
+	   //    //     if(c%2 == 0){
+	   //    //         r.push_back(v[c]);
+	   //    //     }
+	   //    // }
+	   //    // for(long long int c=0;c<n;c++){
+	   //    //     if(c%2 != 0){
+	   //    //         r.push_back(v[c]);
+	   //    //     }
+	   //    // }
+	   //     for(long long int c=0;c<n;c++){
+	   //         r1[c] = r[c];
+	   //     }
+	   //     for(long long int c=0;c<n;c++){
+	   //         v[c] = r[c];
+	   //     }
+	   //    // for(long long int c=0;c<n;c++){
+	   //    //     ans[c] = r[c];
+	   //    // }
+	        
+	   // }
+	    
+	   
+	   
+	   
+	    
+	}
+	return 0;
+}
